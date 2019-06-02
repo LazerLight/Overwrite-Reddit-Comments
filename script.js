@@ -15,8 +15,8 @@ This will open all your comments for editing. Wait until all are open before pro
 */
 (function clickEdit() {
     let currentTime = 0;
-    let aTags = document.querySelectorAll("a.CommentFlatList__item");
-    
+    let aTags = document.querySelectorAll("a.edit-usertext");
+    console.log(53)
     for (const key of Object.keys(aTags)) {
         if (aTags[key].textContent === "edit") {
             currentTime = currentTime + 400;
@@ -38,7 +38,7 @@ comments are overwritten before proceeding to the next step.
 */
 
 (function changeText() {
-    let textAreas = document.querySelectorAll("textarea.MarkdownForm__text");
+    let textAreas = document.querySelectorAll("textarea");
     let currentTime = 0;
     for (const key of Object.keys(textAreas)) {
         currentTime = currentTime + 400;
@@ -59,10 +59,10 @@ Repeat steps 1 - 3 for all your comment pages.
 */
 
 (function saveText() {
-    let saveButtons = document.querySelectorAll("button.MarkdownForm__submit");
+    let saveButtons = document.querySelectorAll("button.save");
     let currentTime = 0;
     for (const key of Object.keys(saveButtons)) {
-        currentTime = currentTime + 400;
+        currentTime = currentTime + 1400;
         setTimeout(function() {
             saveButtons[key].click();
         }, currentTime);
